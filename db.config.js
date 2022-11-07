@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const uri = process.env.MONGODB_URI || 'mongodb://localhost/CRUD';
+const uri = "mongodb://localhost:27017/mydb";
 const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -9,7 +9,7 @@ const logConnection = (error) => {
   if (error) {
     console.log(error);
   } else {
-    console.log('Connected to MongoDB');
+    console.log("Connected to MongoDB");
   }
 };
 

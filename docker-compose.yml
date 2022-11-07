@@ -1,0 +1,16 @@
+version: "2"
+services:
+  app:
+    container_name: docker-mongo-demo1
+    restart: always
+    build: .
+    ports:
+      - "5500:8080"
+    links:
+      - mongo
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27015:27017"
